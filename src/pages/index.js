@@ -16,8 +16,7 @@ export default function IndexPage({ data }) {
       <div className="blog-posts">
         {posts
           .filter(post => post.node.frontmatter.title.length > 0)
-          .map(({ node: post }) => {
-            return (
+          .map(({ node: post }) => 
               <div className="blog-post-listing" key={post.id}>
                 <h1>
                   <Link to={post.frontmatter.path}>
@@ -27,8 +26,7 @@ export default function IndexPage({ data }) {
                 <h2>{post.frontmatter.date}</h2>
                 <p>{post.excerpt}</p>
               </div>
-            )
-          })}
+          )}
       </div>
     </Layout>
   )
