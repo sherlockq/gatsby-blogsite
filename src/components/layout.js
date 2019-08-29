@@ -30,11 +30,14 @@ export const PureLayout = ({ site, children }) => {
           {children}
         </main>
         <footer>
-          © {new Date().getFullYear()}, Built with
+          © {new Date().getFullYear()}, 
+          From <a href="https://zhiqiangqiao.com">Zhiqiang (Sherlock) Qiao</a>
+          {` `}
+          Powered by
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
           {` `}
-          by <a href="https://davidhalewood.com">David Halewood</a>
+          Source @ <a href="https://github.com/sherlockq/gatsby-blogsite">Github</a>
         </footer>
       </div>
     </div>

@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `Crafter Coder`,
-    description: `A blog site for all things software craftsmanship`,
-    author: `@haletothewood`,
-    twitterHandle: "@craftercoder",
-    url: "https://craftercoder.xyz",
+    title: `AHA Moments`,
+    description: `A blog site for all things`,
+    author: `@sherlockq`,
+    twitterHandle: "@sherlockq",
+    url: "https://zhiqiangqiao.com",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -41,7 +41,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-disqus`,
       options: {
-        shortname: `craftercoderxyz`,
+        shortname: `zhiqiangqiao`,
       },
     },
     {
