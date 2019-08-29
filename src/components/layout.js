@@ -31,7 +31,10 @@ export const PureLayout = ({ site, children }) => {
         </main>
         <footer>
           © {new Date().getFullYear()}, 
-          From <a href="https://zhiqiangqiao.com">Zhiqiang (Sherlock) Qiao</a>
+          Authored by <a href="https://zhiqiangqiao.com">Zhiqiang (Sherlock) Qiao</a>
+          <br/>
+          {` `}
+          Template from <a href="https://craftercoder.xyz/">David Halewood</a>
           {` `}
           Powered by
           {` `}
