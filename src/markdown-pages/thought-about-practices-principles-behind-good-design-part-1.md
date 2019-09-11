@@ -5,8 +5,6 @@ title: "Thought about Practices/Principles behind Good Design (Part 1)"
 tags: ["Learn"]
 ---
 ### Object Calisthenics
-https://javflores.github.io/object-calisthenics/
-
 It’s one of my favorite practices for clean code. It seems a bit strict and hard to follow at first encounter, yet proves profitable if you could stick with it or at least have those principles in mind.
 
 I believe the name comes from its original intention to help transforming a procedural programming mindset into an object-oriented one. And it does a great job for me. I’ll walk through every rules and say some words.
@@ -42,15 +40,17 @@ Advices: Follow it. Follow it even seams mundane
 #### No public getters/setters/properties
 * Advice: Too much for a simple data object. But reasonable for a rich object.
 
+[Refer to this in detail](https://javflores.github.io/object-calisthenics/)
+
 ### Baby Step
 For most people, it means return 0/null for your first implementation. And write silly codes which will never make their way into the final code base.
 
 Well I believe it’s just a principle to make sure you don’t go astray too far away, and stick to the single red test for now. But the problem is it doesn’t work all the time. Not to mention it’s inefficient most of the time.
 
-So treat it as a safety net, meanwhile don’t refrain from thinking a few step ahead. You may not write codes for the future, yet it’s totally fine if you think ahead in design.
+So treat it as a safety net, meanwhile don’t refrain from thinking a few steps ahead.
 
 ### TPP
-hmmmm… Don’t like it at all. Not helping. 
+hmmmm… Don’t like it at all. Not helping. I think its usefulness depends on the specific kata you try to solve. And most of time it's hard to follow and not helpful.
 
 ### Coupling and Cohesion
 Before, I think coupling means how much one module knows about the inner implementation of another module. So if you follow the law of Demeter, you should have a low coupling system. But according to the wikipedia page for that concept, it seems quite different. Any knowledge one module has, and any behaviors  one module invokes on the other module will increase their coupling, including interfaces, parameters of method calls, etc. **Everything**.
@@ -59,20 +59,22 @@ So the best way to lower coupling is to move the related information and behavio
 
 IMO, Low coupling leads to Low Cohesion, High Coupling leads to High Cohesion. The target of a good design is to find a balance between moderately low coupling and moderately high cohesion. That’s why they come in pairs.
 
+Incidentally, Coupling is measurable by a formula (see the wiki page below). Yet Cohesion measurement is subject to one's judgement about how things are related.
+
 * [Wiki](https://en.wikipedia.org/wiki/Coupling_(computer_programming))
 * https://stackoverflow.com/questions/3085285/difference-between-cohesion-and-coupling
 
 ### The Law of Demeter
-Synonym for no chained calling. It can also decrease the coupling between modules, but not eliminate it.
+Synonym for no chained invoking. It can also decrease the coupling between modules, but not eliminate it.
 
 ### SOLID
-S: simple class. Somehow like high cohesion.
+S: Simple class. Somehow like high cohesion.
 
 O: A good example is to migrate switch/if statements into Command Pattern. Don’t overdo it.
 
 L: This one stands. I use this rule to check if one class should extend a base class or not.
 
-I: It’s another version of single responsibility, but it’s about the view from caller/client. The interface could be even finer grain than the class.
+I: It’s another version of single responsibility, but it’s from the pespective of caller/client. The interface could be even finer-grained than the class.
 
-D:  Use interfaces. And it’s not enough. Abstraction is more than just using interface. Take it with other principles.
+D: Use interfaces for both high-level dependency and low-level inheritance. And it’s not enough. Abstraction is more than just using interface, it involves extracting fundamental behaviors and hiding details. This might be a natural outcome from following all other principles.
 
