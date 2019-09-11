@@ -1,7 +1,7 @@
 ---
 path: "/blog/thought-about-practices-principles-behind-good-design-part-1"
 date: "2019-09-10"
-title: "Thought about Practices/Principles behind Good Design (Part 1)"
+title: "Thoughts about Practices/Principles behind Good Design (Part 1)"
 tags: ["Learn"]
 ---
 ### Object Calisthenics
