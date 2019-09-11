@@ -52,12 +52,16 @@ So treat it as a safety net, meanwhile don’t refrain from thinking a few steps
 ### TPP
 hmmmm… Don’t like it at all. Not helping. I think its usefulness depends on the specific kata you try to solve. And most of time it's hard to follow and not helpful.
 
+[Definition and examples](https://medium.com/@bean00/the-transformation-priority-premise-81619b247f09)
+[A showcaseof TPP, by far the best one](https://codurance.com/2015/05/18/applying-transformation-priority-premise-to-roman-numerals-kata/
+)
+
 ### Coupling and Cohesion
 Before, I think coupling means how much one module knows about the inner implementation of another module. So if you follow the law of Demeter, you should have a low coupling system. But according to the wikipedia page for that concept, it seems quite different. Any knowledge one module has, and any behaviors  one module invokes on the other module will increase their coupling, including interfaces, parameters of method calls, etc. **Everything**.
 
 So the best way to lower coupling is to move the related information and behavior into itself. And to the extreme, you will have everything in just one module. So cohesion comes in to balance that tendency.
 
-IMO, Low coupling leads to Low Cohesion, High Coupling leads to High Cohesion. The target of a good design is to find a balance between moderately low coupling and moderately high cohesion. That’s why they come in pairs.
+IMO, Low coupling leads to Low Cohesion, High Coupling leads to High Cohesion. The target of a good design is to find a balance between moderately low coupling and moderately high cohesion. That’s why they come in pair.
 
 Incidentally, Coupling is measurable by a formula (see the wiki page below). Yet Cohesion measurement is subject to one's judgement about how things are related.
 
@@ -66,6 +70,8 @@ Incidentally, Coupling is measurable by a formula (see the wiki page below). Yet
 
 ### The Law of Demeter
 Synonym for no chained invoking. It can also decrease the coupling between modules, but not eliminate it.
+
+[Nice explained here](https://dev.to/carlillo/demeters-law-dont-talk-to-strangers-10ep)
 
 ### SOLID
 S: Simple class. Somehow like high cohesion.
@@ -78,3 +84,4 @@ I: It’s another version of single responsibility, but it’s from the pespecti
 
 D: Use interfaces for both high-level dependency and low-level inheritance. And it’s not enough. Abstraction is more than just using interface, it involves extracting fundamental behaviors and hiding details. This might be a natural outcome from following all other principles.
 
+Ref: Too many...and all somehow don't agree each other on some points.
