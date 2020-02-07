@@ -1,8 +1,30 @@
 import React from "react"
-
+import {useStaticQuery} from "gatsby"
 import SEO from "../components/seo"
-import { Image } from "../components/image"
+import Img from "gatsby-image"
 import withLayout from "../utils/withLayout"
+
+const useFixedPlaceholderImage = () => {
+  const { placeholderImage } = useStaticQuery(
+    graphql`
+      query {
+        placeholderImage: file(relativePath: { eq: "dachshund.png" }) {
+          childImageSharp {
+            fixed(width: 200) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+    `
+  )
+  return placeholderImage.childImageSharp.fixed
+}
+
+const Image = () => {
+  const image = useFixedPlaceholderImage()
+  return <Img fixed={image} />
+}
 
 export const NotFoundPage = () => (
   <>
