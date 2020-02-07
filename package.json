@@ -1,9 +1,9 @@
 {
-  "name": "crafter-coder-dot-com",
+  "name": "zhi-qiang-qiao-dot-com",
   "private": true,
-  "description": "A blog for all things software craftsmanship",
+  "description": "A blog of Zhiqiang Qiao",
   "version": "0.1.0",
-  "author": "David Halewood <davidnhalewood@hotmail.com>",
+  "author": "Zhiqiang Qiao<sherlockq@hotmail.com>",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
     "@fortawesome/react-fontawesome": "^0.1.4",
