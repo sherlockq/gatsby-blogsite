@@ -188,7 +188,7 @@ Permission you need to have (but didn't): hudson.model.Hudson.Read
 And on the machine, it's a response looking good. So it meant somehow the HTTP response inside the docker and outside
 is different.
 
-### Arnold joined. "IT'S JENKINS BEHIND THAT"
+### Arnaud joined. "IT'S JENKINS BEHIND THAT"
 Arnold said, husdon was an alias for Jenkins. So that response was from Jenkins.
 
 Until then did I realize it had nothing to with any specific Debian package or the repo at all.
@@ -250,7 +250,7 @@ It was painful.
 So I googled it, as always, and just ran through all the commands mentioned on some random pages, as long as they had no
 side effects (show/list/etc..)
 
-And look at that bastard!!
+And look at that b******d!!
 ```
 [root@ip-xxx /]# iptables -nvL -t nat
 Chain PREROUTING (policy ACCEPT 209K packets, 11M bytes)
