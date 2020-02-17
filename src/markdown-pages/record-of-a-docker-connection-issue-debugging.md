@@ -271,4 +271,4 @@ with me on them.
 necessary, iptables-save seems like saving it automatically
 - Restart to confirm.
 
-And the docker couldn't start up after that. But it's another story.....  :facepalm: <-- TODO: I'll fix the emoji later
+And the docker couldn't start up after that. But it's another story.....  :dizzy_face:
