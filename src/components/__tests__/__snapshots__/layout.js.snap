@@ -272,6 +272,7 @@ exports[`Layout renders correctly 1`] = `
         "marginBottom": "1.45rem",
         "position": "fixed",
         "width": "100%",
+        "zIndex": 1,
       }
     }
   >
@@ -325,8 +326,23 @@ exports[`Layout renders correctly 1`] = `
     />
     <footer>
       © 
-      2019
-      , Built with
+      2020
+      , Authored by 
+      <a
+        href="https://zhiqiangqiao.com"
+      >
+        Zhiqiang (Sherlock) Qiao
+      </a>
+      <br />
+       
+      Template from 
+      <a
+        href="https://craftercoder.xyz/"
+      >
+        David Halewood
+      </a>
+       
+      Powered by
        
       <a
         href="https://www.gatsbyjs.org"
@@ -334,11 +350,11 @@ exports[`Layout renders correctly 1`] = `
         Gatsby
       </a>
        
-      by 
+      Source @ 
       <a
-        href="https://davidhalewood.com"
+        href="https://github.com/sherlockq/gatsby-blogsite"
       >
-        David Halewood
+        Github
       </a>
     </footer>
   </div>
