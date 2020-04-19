@@ -12,6 +12,7 @@ Transducing is an idea based on reducers. It's introduced into Clojure since 1.7
 A transducer's beauty is that: It could affact the final result of reducing, without the dependency on the type of reduced value.
 
 ## Antipasti Examples
+
 Let's start with some examples
 
 ```clojure
@@ -41,7 +42,7 @@ Let's start with some examples
 (transduce transducer-inc * [1 2])
 => 6
 
-; And the same transducer function can be obtained like this. 
+; And the same transducer function can be obtained like this.
 ; We'll explain that 1-arity map later. It's not a partial function
 ; (partial map inc), even they function similarly.
 (transduce (map inc) + [1 2])
@@ -57,9 +58,9 @@ Let's start with some examples
 ## Transducer function
 
 Basically, a transducer function is a wrapper over a reducing function. It returns a new reducing function, in
-which it additionaly does its own logic and then invokes the original reducing function. 
+which it additionaly does its own logic and then invokes the original reducing function.
 
-**What it actually does, is pre-processing the individual item of the collection lazily. When its work is done, it'll pass the processed item to the reducing function, or not (like what `filter` does).** 
+**What it actually does, is pre-processing the individual item of the collection lazily. When its work is done, it'll pass the processed item to the reducing function, or not (like what `filter` does).**
 
 It also has the ability to change the previous result. But it's not a good practice because that means the transducer is dependent on the type of reduced value. If the return type of reducing function is different, it may break the transducer. And this will weaken the value of transducers.
 
@@ -79,8 +80,8 @@ Several collection manipulation functions in clojure have their transducer-gener
         ([] (rf))
         ([result] (rf result))
         ([result input]
-        	; here is the logic of tranducer
-        	; it's so much more readable than the collection version
+         ; here is the logic of tranducer
+         ; it's so much more readable than the collection version
            (if (pred input)
              (rf result input)
              result)))))
@@ -106,6 +107,7 @@ Several collection manipulation functions in clojure have their transducer-gener
 > The following functions produce a transducer when the input collection is omitted: map cat mapcat filter remove take take-while take-nth drop drop-while replace partition-by partition-all keep keep-indexed map-indexed distinct interpose dedupe random-sample
 
 ## Composite of transducers
+
 Transducers are chainable, because the input and output are both reducing function.
 
 ```clojure
@@ -130,8 +132,9 @@ Think tranducers as layers of wrappings, you pack your item from inside to outsi
 ```
 
 ## A bit about Reduce (Welcome to skip this chapter)
+
 I'll assume the reader understands what reducing is. It's not an easy concept by itself, yet you could find
-good explanations elsewhere. 
+good explanations elsewhere.
 
 Reducing function/Reducer: The function specified in a `reduce` call. At least it should take two arguments, and return a value. The reducing function should be able to accept its return value as its first argument, otherwise it won't
 function as expected.
@@ -152,8 +155,9 @@ function as expected.
 =>(2 3)
 ```
 
-Something you might be unaware of: To work properly with a `reduce` call, both 0 and 2-arguments arities are 
+Something you might be unaware of: To work properly with a `reduce` call, both 0 and 2-arguments arities are
 required of the reducing function. 0-arity is invoked when no init value is provided and the collection is empty.
+
 ```clojure
 ; The value 0 is the result of (+)
 (reduce + [])
@@ -161,11 +165,13 @@ required of the reducing function. 0-arity is invoked when no init value is prov
 ```
 
 2-arity is the normal case. It could be invoked with
+
 - the result from previous invocation and the next item in collection
 - the init value and the first item of collection, if init value is provided and collection is not empty
 - the first and second items in collection, if no init value is provided and collection has no less than two items.
 
 So what happens if no init value is provided and there's only one item in collection? The item is returned as it is! The reducing function won't be called at all.
+
 ```clojure
 (reduce conj [1])
 => 1
@@ -176,12 +182,14 @@ So what happens if no init value is provided and there's only one item in collec
 ```
 
 If collection is empty and init value is provided, the init value will be returned straight away. But I believe this is a lot more expected, not like the last finding.
+
 ```clojure
 (reduce nil [5] [])
 => [5]
 ```
 
 ## Init value of transduce
+
 Unlike `reduce` function, `transduce` will always call the 0-arity transformed reducing function to generate
 a initial value if it's not provided. So the first item of collection won't be used as the first argument of
 2-arity transformed reducing function.
@@ -202,10 +210,9 @@ a initial value if it's not provided. So the first item of collection won't be u
 
 Could you explain why the results are different? Because in the third statement, the first `1` is passed as the first argument to the reducing function, and it's never increased as other item.
 
-
 ## Transducers are not only for transduce
-Transducer is not necessarily only used with a reducing function. For some special cases, i.e. `into` and `sequence`, there are no places for a reducing function. Instead, under the hood an equivalent of reducing function is provided.
 
+Transducer is not necessarily only used with a reducing function. For some special cases, i.e. `into` and `sequence`, there are no places for a reducing function. Instead, under the hood an equivalent of reducing function is provided.
 
 ```clojure
 (into [] (filter odd?) (range 10))
@@ -219,8 +226,8 @@ Transducer is not necessarily only used with a reducing function. For some speci
 => #{7 1 3 9 5}
 
 
-; The reducing function of sequence is more complex. 
-; Somehow it could be fathomed as a function which takes a LazySeq 
+; The reducing function of sequence is more complex.
+; Somehow it could be fathomed as a function which takes a LazySeq
 ; and a item, returns a new LazySeq with the item appended
 (sequence (filter odd?) (range 10))
 => (1 3 5 7 9)
@@ -231,6 +238,7 @@ Transducer is not necessarily only used with a reducing function. For some speci
 ```
 
 ## More examples
+
 ```clojure
 (transduce (filter odd?) + (range 5))
 => 4
@@ -242,7 +250,7 @@ Transducer is not necessarily only used with a reducing function. For some speci
 
 ; cat is a transducer on its own
 ; https://clojuredocs.org/clojure.core/cat
-; Its clojuredoc is really confusing. 
+; Its clojuredoc is really confusing.
 ; In my word, it'll apply the reducer to each child
 ; item of the item in collection. Well, it's easier to read the source code directly.
 (transduce cat + [[1] [2]])
@@ -256,18 +264,14 @@ Transducer is not necessarily only used with a reducing function. For some speci
 
 ```
 
-
 ## Questions
+
 **Q**: What's the 1-arity of the returned reducing function from transducer for?
 
 **A**: Reducing function must have 0 and 2 parameters arities to work with `reduce`. But for a transducer friendly reducing function, one arity is necessary. It's explained [here](https://clojure.org/reference/transducers#_creating_transducers).
 
-
 ## References
-- https://clojure.org/reference/transducers
-- https://blog.frankel.ch/learning-clojure/7/
-- https://stackoverflow.com/questions/26317325/can-someone-explain-clojure-transducers-to-me-in-simple-terms
 
-
-
-
+- <https://clojure.org/reference/transducers>
+- <https://blog.frankel.ch/learning-clojure/7/>
+- <https://stackoverflow.com/questions/26317325/can-someone-explain-clojure-transducers-to-me-in-simple-terms>
