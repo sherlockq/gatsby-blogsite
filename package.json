@@ -13,7 +13,7 @@
     "gatsby-plugin-manifest": "^2.2.0",
     "gatsby-plugin-offline": "^3.1.2",
     "gatsby-plugin-react-helmet": "^3.2.1",
-    "gatsby-plugin-sass": "^2.1.0",
+    "gatsby-plugin-sass": "^2.2.3",
     "gatsby-plugin-sharp": "^2.2.11",
     "gatsby-remark-emoji": "^0.0.3",
     "gatsby-remark-images": "^3.1.11",
