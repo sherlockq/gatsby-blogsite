@@ -20,7 +20,7 @@
     "gatsby-remark-prismjs": "^3.3.3",
     "gatsby-source-filesystem": "^2.1.2",
     "gatsby-transformer-remark": "^2.7.1",
-    "gatsby-transformer-sharp": "^2.4.6",
+    "gatsby-transformer-sharp": "^2.4.7",
     "node-sass": "^4.12.0",
     "prismjs": "^1.16.0",
     "prop-types": "^15.7.2",
