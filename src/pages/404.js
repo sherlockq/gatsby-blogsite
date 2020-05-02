@@ -1,5 +1,5 @@
 import React from "react"
-import {useStaticQuery} from "gatsby"
+import {useStaticQuery, graphql} from "gatsby"
 import SEO from "../components/seo"
 import Img from "gatsby-image"
 import withLayout from "../utils/withLayout"
