@@ -7,9 +7,9 @@ tags: ["Clojure"]
 
 If you've read the [official article](https://clojure.org/reference/transducers) and still feel confused, you're not alone. So here I try to articulate it with my own words and examples.
 
-Transducing is an idea based on reducers. It's introduced into Clojure since 1.7, and there's not really a functionality which could not be implemented by other ways. Yet it significantly improve the composability of reducing functions.
+Transducing is an idea based on reducers. It's introduced into Clojure since 1.7, and there's not really a functionality which could not be implemented by other ways. Still this feature significantly improve the reusability of reducing functions.
 
-A transducer's beauty is that: It could affact the final result of reducing, without the dependency on the type of reduced value.
+A transducer's beauty is that: It could affect the final result of reducing, without the dependency on the type of reduced value.
 
 ## Antipasti Examples
 
@@ -58,7 +58,7 @@ Let's start with some examples
 ## Transducer function
 
 Basically, a transducer function is a wrapper over a reducing function. It returns a new reducing function, in
-which it additionaly does its own logic and then invokes the original reducing function.
+which it does its own logic and then invokes the original reducing function.
 
 **What it actually does, is pre-processing the individual item of the collection lazily. When its work is done, it'll pass the processed item to the reducing function, or not (like what `filter` does).**
 
@@ -275,3 +275,5 @@ Transducer is not necessarily only used with a reducing function. For some speci
 - <https://clojure.org/reference/transducers>
 - <https://blog.frankel.ch/learning-clojure/7/>
 - <https://stackoverflow.com/questions/26317325/can-someone-explain-clojure-transducers-to-me-in-simple-terms>
+
+
