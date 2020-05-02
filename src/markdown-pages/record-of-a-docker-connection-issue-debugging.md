@@ -6,8 +6,9 @@ tags: ["Tips"]
 ---
 ## Summary
 
-This blog is about how I encounter an unexpected issue while maintaining the AWS deployed machine. And how I found out
-the true culprit and solve it in an acceptable way for now. Also the joining of my colleagues eased the pain a lot.
+This blog is about how I encounter an unexpected issue while maintaining the AWS deployed machine.
+Plus how I found out the true culprit and solve it acceptably for now. Also, the joining of my
+colleagues eased the pain a lot.
 
 **Brief take away:** Use immutable/version-controlled/code-as-configuration infrastructure.
 
@@ -48,7 +49,7 @@ on pipeline was swift enough.
 
 And so it comes
 
-``` text
+``` log
 Sending build context to Docker daemon  18.43kB
 
 Step 1/4 : FROM clojure:openjdk-8-lein
@@ -122,7 +123,7 @@ The command '/bin/sh -c curl -sL https://deb.nodesource.com/setup_12.x | bash -'
 
 BTW, it's what success looks like.
 
-``` text
+``` log
 ❯ docker run -it --rm clojure:openjdk-8-lein bash
 root@b2a964293325:/tmp# apt update
 Get:1 http://security.debian.org/debian-security stretch/updates InRelease [94.3 kB]
@@ -153,7 +154,7 @@ ISN'T DOCKER SUPPOSED TO BE THE SAME EVERYWHERE?
 
 So maybe the base image is different, due to prior caching on the machine?
 
-``` text
+``` log
 Step 1/4 : FROM clojure:openjdk-8-lein
  ---> 64f1da2a6932
 ```
@@ -184,7 +185,7 @@ During all that time, I still thought it's due to the missing of some Debian pac
 
 Somehow I executed `curl http://deb.debian.org` in docker:
 
-``` text
+``` log
 [ec2-user@ip-xxx ~]$ curl http://deb.debian.org
 <html><head><meta http-equiv='refresh' content='1;url=/securityRealm/commenceLogin?from=%2F'/><script>window.location.replace('/securityRealm/commenceLogin?from=%2F');</script></head><body style='background-color:white; color:white;'>
 
@@ -207,13 +208,13 @@ is different.
 
 ### Arnaud joined. "IT'S JENKINS BEHIND THAT"
 
-Arnold said, husdon was an alias for Jenkins. So that response was from Jenkins.
+Arnold said, `husdon` was an alias for Jenkins. So that response was from Jenkins.
 
 Until then did I realize it had nothing to with any specific Debian package or the repo at all.
 
 ### Some HTTP tests
 
-All curl requests on the machine is fine. And all curl requests in the docker is broken with the 403 response.
+All curl requests on the machine was fine. All curl requests in the docker broke with the 403 response.
 
 - Different base image? Same
 - DNS? ping/nslookup resolved to same ip
@@ -253,7 +254,7 @@ Something about Docker there. But nothing about port 80.
 
 ### Arnold noticed docker network, "Give it a go"
 
-By default the container was bound to `bridged` network. And there's also a network called `host`. But my understanding
+By default, the container connected to `bridged` network. Meanwhile, there's also a network called `host`. However, my understanding
 of `host` network was that only traffics between container and host machine are allowed. So I explained and refused at first.
 
 I was glad I didn't insist longer than 10 seconds because what else choices did I have?
@@ -280,7 +281,7 @@ side effects (show/list/etc..)
 
 And look at that b******d!!
 
-``` text
+``` shell
 [root@ip-xxx /]# iptables -nvL -t nat
 Chain PREROUTING (policy ACCEPT 209K packets, 11M bytes)
  pkts bytes target     prot opt in     out     source               destination
@@ -296,9 +297,9 @@ with me on them.
 - Check AWS Route 53, ELB settings, to understand the port forwarding mechanism
 - Find way to backup iptables rule. `iptables-save`
 - Change target group port mapping in AWS.
-- Remove iptable rule by command.
+- Remove iptables rule by command.
 - Problem solved! And Jenkins was accessible all the same.
-- Remove iptable rule from the startup file `/etc/sysconfig/iptables` to persist change over reboot. But it may not be
+- Remove iptables rule from the startup file `/etc/sysconfig/iptables` to persist change over reboot. But it may not be
 necessary, iptables-save seems like saving it automatically
 - Restart to confirm.
 

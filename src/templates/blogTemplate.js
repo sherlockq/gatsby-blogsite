@@ -28,12 +28,16 @@ export default function BlogTemplate({ data }) {
   return (
     <Layout>
       <div className="blog-post-container">
-        <Helmet title={`Crafter Coder | ${post.frontmatter.title}`} />
+        <Helmet title={`AHA Moment | ${post.frontmatter.title}`} />
         <Link to={`${post.frontmatter.path}#disqus`}>
           <CommentCount config={disqusConfig} placeholder={"..."} />
         </Link>
         <div className="blog-post">
-          <h2>{post.frontmatter.title}</h2>
+          <h1>{post.frontmatter.title}</h1>
+          <div
+            className="blog-post-toc"
+            dangerouslySetInnerHTML={{ __html: post.tableOfContents }}
+          />
           <div
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: post.html }}
@@ -70,6 +74,9 @@ export const pageQuery = graphql`
     }
     post: markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
+      tableOfContents(
+        pathToSlugField: "frontmatter.path"
+      )
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         path
