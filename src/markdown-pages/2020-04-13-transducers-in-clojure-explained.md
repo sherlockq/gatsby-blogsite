@@ -80,7 +80,7 @@ Several collection manipulation functions in clojure have their transducer-gener
         ([] (rf))
         ([result] (rf result))
         ([result input]
-         ; here is the logic of tranducer
+         ; here is the logic of transducer
          ; it's so much more readable than the collection version
            (if (pred input)
              (rf result input)
@@ -117,7 +117,7 @@ Transducers are chainable, because the input and output are both reducing functi
 
 But be careful, the transducers are applied from left to right when chained with `comp`.
 
-Think tranducers as layers of wrappings, you pack your item from inside to outside, like building the new reducing function with transducers from right to left. But when the transformed reducing function is invoked, the logics in transducers are applied from left to right, like unpacking the package.
+Think transducers as layers of wrappings, you pack your item from inside to outside, like building the new reducing function with transducers from right to left. But when the transformed reducing function is invoked, the logics in transducers are applied from left to right, like unpacking the package.
 
 ```clojure
 
@@ -275,5 +275,3 @@ Transducer is not necessarily only used with a reducing function. For some speci
 - <https://clojure.org/reference/transducers>
 - <https://blog.frankel.ch/learning-clojure/7/>
 - <https://stackoverflow.com/questions/26317325/can-someone-explain-clojure-transducers-to-me-in-simple-terms>
-
-
