@@ -48,6 +48,7 @@ module.exports = {
       options: {
         plugins: [
           `gatsby-remark-emoji`,
+          `gatsby-remark-katex`,
           {
             resolve: `gatsby-remark-autolink-headers`,
             options: {

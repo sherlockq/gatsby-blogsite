@@ -8,6 +8,7 @@ import Share from "../components/share"
 import Tag from "../components/tag"
 
 import "../styles/blog-post.scss"
+import "katex/dist/katex.min.css"
 
 export default function BlogTemplate({ data }) {
   const post = data.post
