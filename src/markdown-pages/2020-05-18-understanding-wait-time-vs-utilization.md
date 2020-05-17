@@ -1,8 +1,8 @@
 ---
-path: "/blog/understanding-wait-time-vs-utilization.md"
+path: "/blog/understanding-wait-time-vs-utilization"
 date: "2020-05-18"
 title: "Understanding wait time versus utilization - from reading Phoenix Project"
-tags: ["Scrum" "Maths"]
+tags: ["Scrum", "Maths"]
 ---
 **Work in progress**
 
@@ -22,7 +22,7 @@ My first impression then was that, how come a lower utilization would increase p
 
 ## Short conclusion
 
-For my first impression, the answer is, lower utilization wouldn't improve the common perception of performance. I confused 'wait time' as the only factor of the performance. Actually, a lower utilization decrease wait time at the cost of a worse throughput, which is defined as amount of tasks finished in a fixed period of time.
+For the first impression, the answer is, lower utilization wouldn't improve the common perception of performance. I confused 'wait time' as the only factor of the performance. Actually, a lower utilization decrease wait time at the cost of a worse throughput, which is defined as amount of tasks finished in a fixed period of time.
 
 It's better to introduce a definition of all components in lead time now.
 
@@ -33,6 +33,8 @@ As we can see, a lower wait time should decrease lead time, therefore improve th
 **In other words, to decrease utilization, to improve wait time, we need to decrease the total assigned tasks in the time period.**
 
 So wait time is a trade off of throughput. In manufacturing, high wait time leads to higher inventory. In software industry, high wait time leads to slower feature delivery. Bear in mind, faster doesn't mean more.
+
+The answer for the ninefold wait time is simple: it's math.
 
 ## Long journey
 
