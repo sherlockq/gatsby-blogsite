@@ -6601,10 +6601,10 @@ gatsby-remark-images@^3.1.11:
     unist-util-select "^1.5.0"
     unist-util-visit-parents "^2.1.2"
 
-gatsby-remark-katex@^3.3.1:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-katex/-/gatsby-remark-katex-3.3.1.tgz#29b0fe4129bfddb8a984766f17ec4969addd0068"
-  integrity sha512-eKLCL6VBvRFAW9qw4Ubh0MnmUQLw9JZ0he4kFmXQaWlHzPReCfpy21xBxLSVE+wELaX16Ms+otVlNyn8PZBSKg==
+gatsby-remark-katex@^3.3.2:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-katex/-/gatsby-remark-katex-3.3.2.tgz#b66a2ca5c09babcfc9ecef0b1b05d94ffaacf63c"
+  integrity sha512-+B8AX7UlW6TCMdsyCfr5+qAX7loqSytJRuzE/FNc9BuejiQDJluRFeKT1T1hWCRfCHpdJpF+huNi2aOmVH9NIw==
   dependencies:
     "@babel/runtime" "^7.9.6"
     remark-math "^1.0.6"
