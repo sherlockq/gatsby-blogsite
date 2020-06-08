@@ -31,7 +31,7 @@
     "react": "^16.8.6",
     "react-burger-menu": "^2.6.15",
     "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.1",
+    "react-helmet": "^6.1.0",
     "react-share": "^4.2.0"
   },
   "devDependencies": {
