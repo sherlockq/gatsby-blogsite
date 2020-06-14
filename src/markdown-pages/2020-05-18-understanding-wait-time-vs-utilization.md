@@ -43,7 +43,7 @@ In the process of solving the confusion, I went through the origin of formula in
 
 The formula in question stems from Kingman's formula, 'is an approximation for the mean waiting time in a G/G/1 queue'. 'The formula is the product of three terms which depend on utilization (U), variability (V) and service time (T).'
 
-![Kingman's formula](understanding-wait-time-vs-utilization/kingman-formula.png)
+$E(W)=(\frac{p}{1-p}) \cdot (\frac{C_a^2+C_s^2}{2}) \cdot \mu_s$
 
 > **Queue**: Picture this as a fast food counter. One attendant, one queue.
 >
