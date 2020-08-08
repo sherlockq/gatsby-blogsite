@@ -10,6 +10,8 @@ I've got a Intel Skull Canyon mini PC box at home with Windows 10 installed. Mos
 
 Still MacBook is my main working platform but I am not necessarily binded to it. All I need is an Operation System having fully functionable shell terminal and a lively ecosystem of softwares. Windows turns out not a good fit for me in work scenario so Ubuntu is my next try in list.
 
+I've updated to Ubuntu 20.04.1 LTS. So far so good. 
+
 ## Steps
 
 ### Make room for Ubuntu
@@ -36,6 +38,57 @@ Follow the boot device hints of BIOS. It's surprisingly easy to follow the steps
 
 - <https://github.com/rupa/z>
 - <https://github.com/sindresorhus/pure>
+
+## Install git env including GPG
+
+### Prerequisite
+
+- Git already installed, I prefer to get the homebrew version of which updates are more frequent
+- GPG keys already generated and added to Github
+- I protected my email address on GitHub so during the setup I'm referring to the public fuzzy one
+- I also installed hub as a wrapper for github
+
+### Basic setup
+
+```
+git config --global user.email "615526+sherlockq@users.noreply.github.com"                                                    
+git config --global user.name "Zhiqiang (Sherlock) Qiao"                                                                      
+git config --global hub.protocol https                                                                                        
+```
+
+### Setup gpg
+
+```
+gpg import [key-path]
+gpg --list-secret-keys 
+```
+Copy the SHA keys from last command and put that into git command
+
+```
+git config --global commit.gpgsign true                                                                                       
+git config --global user.signingkey 2A18BE2F0EE09C89ACBB88D986C0C86BB4675EF3                         
+```
+
+Now we should be able to signed commit
+
+### Keep credential in Ubuntu's password manager
+
+I prefer to use HTTPS protocol to access GitHub by default, thus instead of SSH keys a token was generated and used as password.
+
+That requires a credential store to avoid repeat input. I used Ubuntu's owne which rebranded from Seahorse. It's a GUI could open by command `seahorse`. Libsecret is also required to act as an bridge.
+
+```
+cd /usr/share/doc/git/contrib/credential/libsecret/
+sudo apt-get install libsecret-1-0 libsecret-1-dev
+sudo make
+
+git config --global credential.helper /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+```
+
+Then we could simply remove libsecret-1-dev and `sudo apt-get autoremove` to clean up.
+
+After these steps we should only input passwords once.
+
 
 ## References
 
