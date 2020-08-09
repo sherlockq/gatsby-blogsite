@@ -89,7 +89,23 @@ Then we could simply remove libsecret-1-dev and `sudo apt-get autoremove` to cle
 
 After these steps we should only input passwords once.
 
+### Docker Credential helper
 
+We could do the same thing for docker to store credential in Seahorse.
+
+Download docker-credential-secretservice release executable from here https://github.com/docker/docker-credential-helpers/releases
+
+Extract the single file `docker-credential-secretservice` and copy that to a place within PATH, I put
+it in `/usr/local/bin`. Then give it executable permission:
+`sudo chmod +x /usr/local/bin/docker-credential-secretservice`
+
+Then edit the docker config json at your home folder, and add settings like this:
+```
+# cat ~/.docker/config.json 
+{
+	"credsStore": "secretservice"
+}
+```
 ## References
 
 <https://ubuntu.com/tutorials/tutorial-create-a-usb-stick-on-windows#2-requirements>
