@@ -26,6 +26,85 @@ exports[`Layout renders correctly 1`] = `
       }
     />
     <div
+      style={Object {}}
+    >
+      <div
+        className="bm-burger-button"
+        style={
+          Object {
+            "zIndex": 1000,
+          }
+        }
+      >
+        <button
+          id="react-burger-menu-btn"
+          onClick={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          style={
+            Object {
+              "background": "transparent",
+              "border": "none",
+              "cursor": "pointer",
+              "fontSize": 0,
+              "height": "100%",
+              "left": 0,
+              "margin": 0,
+              "padding": 0,
+              "position": "absolute",
+              "top": 0,
+              "width": "100%",
+              "zIndex": 1,
+            }
+          }
+        >
+          Open Menu
+        </button>
+        <span>
+          <span
+            className="bm-burger-bars"
+            style={
+              Object {
+                "height": "20%",
+                "left": 0,
+                "opacity": 1,
+                "position": "absolute",
+                "right": 0,
+                "top": "0%",
+              }
+            }
+          />
+          <span
+            className="bm-burger-bars"
+            style={
+              Object {
+                "height": "20%",
+                "left": 0,
+                "opacity": 1,
+                "position": "absolute",
+                "right": 0,
+                "top": "40%",
+              }
+            }
+          />
+          <span
+            className="bm-burger-bars"
+            style={
+              Object {
+                "height": "20%",
+                "left": 0,
+                "opacity": 1,
+                "position": "absolute",
+                "right": 0,
+                "top": "80%",
+              }
+            }
+          />
+        </span>
+      </div>
+    </div>
+    <div
+      aria-hidden={true}
       className="bm-menu-wrap"
       id=""
       style={
@@ -131,6 +210,29 @@ exports[`Layout renders correctly 1`] = `
             }
           }
         >
+          <button
+            id="react-burger-cross-btn"
+            onClick={[Function]}
+            style={
+              Object {
+                "background": "transparent",
+                "border": "none",
+                "cursor": "pointer",
+                "fontSize": 0,
+                "height": "100%",
+                "left": 0,
+                "margin": 0,
+                "padding": 0,
+                "position": "absolute",
+                "top": 0,
+                "width": "100%",
+                "zIndex": 1,
+              }
+            }
+            tabIndex={-1}
+          >
+            Close Menu
+          </button>
           <span
             style={
               Object {
@@ -163,104 +265,7 @@ exports[`Layout renders correctly 1`] = `
               }
             />
           </span>
-          <button
-            onClick={[Function]}
-            style={
-              Object {
-                "background": "transparent",
-                "border": "none",
-                "cursor": "pointer",
-                "fontSize": 0,
-                "height": "100%",
-                "left": 0,
-                "margin": 0,
-                "padding": 0,
-                "position": "absolute",
-                "top": 0,
-                "width": "100%",
-              }
-            }
-            tabIndex={-1}
-          >
-            Close Menu
-          </button>
         </div>
-      </div>
-    </div>
-    <div
-      style={Object {}}
-    >
-      <div
-        className="bm-burger-button"
-        style={
-          Object {
-            "zIndex": 1000,
-          }
-        }
-      >
-        <span>
-          <span
-            className="bm-burger-bars"
-            style={
-              Object {
-                "height": "20%",
-                "left": 0,
-                "opacity": 1,
-                "position": "absolute",
-                "right": 0,
-                "top": "0%",
-              }
-            }
-          />
-          <span
-            className="bm-burger-bars"
-            style={
-              Object {
-                "height": "20%",
-                "left": 0,
-                "opacity": 1,
-                "position": "absolute",
-                "right": 0,
-                "top": "40%",
-              }
-            }
-          />
-          <span
-            className="bm-burger-bars"
-            style={
-              Object {
-                "height": "20%",
-                "left": 0,
-                "opacity": 1,
-                "position": "absolute",
-                "right": 0,
-                "top": "80%",
-              }
-            }
-          />
-        </span>
-        <button
-          onClick={[Function]}
-          onMouseOut={[Function]}
-          onMouseOver={[Function]}
-          style={
-            Object {
-              "background": "transparent",
-              "border": "none",
-              "cursor": "pointer",
-              "fontSize": 0,
-              "height": "100%",
-              "left": 0,
-              "margin": 0,
-              "padding": 0,
-              "position": "absolute",
-              "top": 0,
-              "width": "100%",
-            }
-          }
-        >
-          Open Menu
-        </button>
       </div>
     </div>
   </div>
