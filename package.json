@@ -25,14 +25,14 @@
     "gatsby-transformer-remark": "^2.8.27",
     "gatsby-transformer-sharp": "^2.5.11",
     "katex": "^0.12.0",
-    "node-sass": "^4.14.0",
     "prismjs": "^1.16.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-burger-menu": "^2.7.0",
     "react-dom": "^16.8.6",
     "react-helmet": "^6.1.0",
-    "react-share": "^4.2.1"
+    "react-share": "^4.2.1",
+    "sass": "^1.43.5"
   },
   "devDependencies": {
     "babel-jest": "^26.1.0",
