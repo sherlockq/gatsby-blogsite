@@ -3,6 +3,7 @@ path: "/blog/thoughts-of-shape-up"
 date: "2021-12-29"
 title: "Thoughts of 'Shape up'"
 tags: ["Book review", "Agile", "Project management"]
+wip: true
 ---
 
 ## Summary
