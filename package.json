@@ -16,6 +16,7 @@
     "gatsby-plugin-sass": "^2.3.12",
     "gatsby-plugin-sharp": "^2.6.22",
     "gatsby-remark-autolink-headers": "^2.3.11",
+    "gatsby-remark-embedder": "^5.0.0",
     "gatsby-remark-emoji": "^0.0.3",
     "gatsby-remark-images": "^3.3.21",
     "gatsby-remark-katex": "^3.3.10",

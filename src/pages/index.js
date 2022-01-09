@@ -16,7 +16,8 @@ export default function IndexPage({ data }) {
       <div className="blog-posts">
         {posts
           .filter(post => post.node.frontmatter.title.length > 0)
-          .map(({ node: post }) => 
+          .filter(post => post.node.frontmatter.wip !== true)
+          .map(({ node: post }) =>
               <div className="blog-post-listing" key={post.id}>
                 <h1>
                   <Link to={post.frontmatter.path}>
@@ -43,6 +44,7 @@ export const pageQuery = graphql`
             title
             date(formatString: "MMMM DD, YYYY")
             path
+            wip
           }
         }
       }
