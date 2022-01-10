@@ -58,6 +58,15 @@ I'm never good at Systemd. I find this file `/lib/systemd/system/docker.service`
 port to the ExecStart line, which works. But once the docker is updated, that file will be replaced.
 After two occurrences of this, I decided to move on.
 
+## Extra gift for test container users
+
+```shell
+➜ cat ~/.testcontainers.properties
+# not sure the first line is necessary, it was there before
+docker.client.strategy=org.testcontainers.dockerclient.UnixSocketClientProviderStrategy
+docker.host=tcp\://sthome-nuc\:2375
+```
+
 ## References
 
 Most of the answer is in [docker systemd](https://docs.docker.com/config/daemon/systemd/). But to
