@@ -33,7 +33,7 @@ Follow the boot device hints of BIOS. It's surprisingly easy to follow the steps
 ## After Ubuntu install
 
 1. Homebrew works in Ubuntu, so I use it to keep my habits in OSX. Follow the steps on the website. Manual installation through apt is required for both curl and git.
-2. zsh/oh-my-zsh. It might makes subsequent installation of plugins through Homebrew easier if zsh is installed from Homebrew as well. Then, sudo edit `/etc/shells` to add path to brewed zsh (at $HOMEBREW_PREFIX/bin/zsh). Then `chsh -s` the shell and a re-login is required. Maybe that's due to the change made to .profile instead of .bash. (<https://www.howtoforge.com/tutorial/how-to-setup-zsh-and-oh-my-zsh-on-linux/)>
+2. zsh/oh-my-zsh. It might makes subsequent installation of plugins through Homebrew easier if zsh is installed from Homebrew as well. Then, sudo edit `/etc/shells` to add path to brewed zsh (at $HOMEBREW_PREFIX/bin/zsh). Then `chsh -s` the shell and a re-login is required. Maybe that's due to the change made to .profile instead of .bash. 
 3. Some tools for terminal I fancy a lot
 
 - <https://github.com/rupa/z>
