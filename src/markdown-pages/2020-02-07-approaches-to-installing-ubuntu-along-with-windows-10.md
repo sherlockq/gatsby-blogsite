@@ -24,7 +24,7 @@ I used [Macroit's Partition Expert](https://macrorit.com/partition-magic-manager
 
 A sacrifice of USB disk is required in this step.
 
-My experience in this part was mediocre. Please try a different tools mentioned in the official tutorial. (<https://askubuntu.com/questions/52963/how-do-i-set-windows-to-boot-as-the-default-in-the-boot-loader)>
+Following the recommended burning tool in the official tutorial works well. (<https://askubuntu.com/questions/52963/how-do-i-set-windows-to-boot-as-the-default-in-the-boot-loader)>
 
 ### Reboot and Install
 
@@ -32,8 +32,8 @@ Follow the boot device hints of BIOS. It's surprisingly easy to follow the steps
 
 ## After Ubuntu install
 
-1. Homebrew works in Ubuntu, so I use it to keep my habits in OSX.
-2. zsh/oh-my-zsh. After `chsh` a re-login is required. Maybe that's due to the change made to .profile instead of .bash. (<https://www.howtoforge.com/tutorial/how-to-setup-zsh-and-oh-my-zsh-on-linux/)>
+1. Homebrew works in Ubuntu, so I use it to keep my habits in OSX. Follow the steps on the website. Manual installation through apt is required for both curl and git.
+2. zsh/oh-my-zsh. It might makes subsequent installation of plugins through Homebrew easier if zsh is installed from Homebrew as well. Then, sudo edit `/etc/shells` to add path to brewed zsh (at $HOMEBREW_PREFIX/bin/zsh). Then `chsh -s` the shell and a re-login is required. Maybe that's due to the change made to .profile instead of .bash. (<https://www.howtoforge.com/tutorial/how-to-setup-zsh-and-oh-my-zsh-on-linux/)>
 3. Some tools for terminal I fancy a lot
 
 - <https://github.com/rupa/z>
@@ -59,7 +59,7 @@ git config --global hub.protocol https
 ### Setup gpg
 
 ```
-gpg import [key-path]
+gpg --import [key-path]
 gpg --list-secret-keys 
 ```
 Copy the SHA keys from last command and put that into git command
@@ -78,6 +78,7 @@ I prefer to use HTTPS protocol to access GitHub by default, thus instead of SSH 
 That requires a credential store to avoid repeat input. I used Ubuntu's owne which rebranded from Seahorse. It's a GUI could open by command `seahorse`. Libsecret is also required to act as an bridge.
 
 ```
+# install make from brew if necessary
 cd /usr/share/doc/git/contrib/credential/libsecret/
 sudo apt-get install libsecret-1-0 libsecret-1-dev
 sudo make
