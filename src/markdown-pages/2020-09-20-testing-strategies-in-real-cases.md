@@ -17,7 +17,7 @@ later.
 
 All practices come with applicable contexts. I've seen some well put articles around the 
 necessities of unit testing, whatever the definition of unit is. One main context we are under
- is that it's gonna be a moderately big real project, which means at least months of effort 
+ is that it's going to be a moderately big real project, which means at least months of effort 
  from a few Scrum teams of developers.
 
 On the contrary to common image, tests actually take more skills and effort to write. If a test 
@@ -42,8 +42,8 @@ What's worthwhile to note is that it is reasonable to have a test for integratio
    in confidence.
     
 However, I've seen an exception in recent project. The workflow covers quite a few units, and 
-it has various sub cases which expects different behaviours from units. Then it makes sense to 
-have a feature test for each sub cases, in case the target is lost during the development.
+it has various branches which expects different behaviours from units. Then it makes sense to 
+have a feature test for each branch, in case the target is lost during the development.
 
 When we look at the pyramid and the real cases together, confusion arises. Where is the boundary
  for each type of test? Shall we include that component in this test of not?
@@ -112,7 +112,7 @@ only happens for edge cases which is not covered by feature test, the choice to 
 up to the trade-off between cost and benefits. There is no golden rule and sometimes the lesson has
  to be learnt with found bugs in later stages. 
  
-Other hidden infrastructure as API gateway, load balancer, networks, CDN etc can only be covered
+Other hidden infrastructure as API gateway, load balancer, networks, CDN etc. can only be covered
  by E2E test, even costly. Question is whether to test features in independent module/service or 
  the interaction among them.
 
