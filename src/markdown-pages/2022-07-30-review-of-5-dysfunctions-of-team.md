@@ -32,7 +32,7 @@ for a more enjoyable environment.
 The diagram that showcase the layered dysfunctions
 ![The diagram that showcase the layered dysfunctions](5-dysfunctions/The-5-Dysfunctions-of-a-Team-2.jpg)
 
-### A discussion on the example for top dysfunction
+### A discussion around "Inattention to results"
 
 In the book, the author used an example as the dysfunction of inattention to results. One of the character joined the
 company with the expectation to nurture his COO career. When the sales director quit, he had to volunteer to take that
