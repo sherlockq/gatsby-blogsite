@@ -41,7 +41,7 @@ In most projects I've joined, the challenge is not the autonomy, but the missing
 product owner role at all. On this regard, I find this approach hardly more valuable than existing INVEST
 principle of story writing.
 
-###
+### Appetite versus Estimation
 
 
 
