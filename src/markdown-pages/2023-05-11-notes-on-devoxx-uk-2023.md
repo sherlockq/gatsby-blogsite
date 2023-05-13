@@ -18,13 +18,13 @@ tags: [ "Devoxx" ]
     - Ramp up time
     - Developer satisfaction
 
-# Embracing Imposter syndrome by Dom Hodgson
+## Embracing Imposter syndrome by Dom Hodgson
 
 Dom humorously shared his experience of doing things as novice from scratch. However,
 it felt to me that's not wholly imposter related. It's a fun talk but not really impactful I'm
 afraid.
 
-# Kotlin, Project Loom and Coroutines by Urs Peter from Xebia
+## Kotlin, Project Loom and Coroutines by Urs Peter from Xebia
 
 Very informative to a Kotlin novice like me. Some fun facts
 
@@ -46,7 +46,7 @@ Very informative to a Kotlin novice like me. Some fun facts
 - He did a nice comparison of various factors between Coroutine and Loom, and a decision charts for
   actions.
 
-# Scaling from 0 to 20m users by Josip Stuhli from Sofascore
+## Scaling from 0 to 20m users by Josip Stuhli from Sofascore
 
 It's a live game score service founded in 2010. Honest first-hand stories from the speaker.
 
@@ -57,7 +57,7 @@ It's a live game score service founded in 2010. Honest first-hand stories from t
 - Business first. Optimization based on business.
 - They moved back to data center due to the huge cost of data traffic.
 
-# Introduction to agent powered security from Contrast
+## Introduction to agent powered security from Contrast
 
 Interesting product, worth a try.
 
@@ -66,7 +66,7 @@ Interesting product, worth a try.
 - He quoted the three ways from Project Phoenix to highlight the conflict of security backlog and
   feature backlog. Nice try, kinda wrap the product selling nice.
 
-# Cognitive Biases
+## Cognitive Biases
 
 Introduces the remedy to the cognitive biases brought known by Think fast, think slow.
 
@@ -79,7 +79,7 @@ Introduces the remedy to the cognitive biases brought known by Think fast, think
   day.
 - In-group and out-group bias
 
-# Containers security
+## Containers security
 
 - `JDeps` could generate the list of dependent Java modules which could ingested by `JLink` to
   create a custom-bundled JRE. This is the recommended approach after Java 11.
@@ -88,7 +88,7 @@ Introduces the remedy to the cognitive biases brought known by Think fast, think
 - exploit-db, a nice place to find exploitation info
 - `docker build --no-cache` to make sure rebuilding with latest base image.
 
-# CTF 101
+## CTF 101
 
 - A fun challenge to find the hidden hash "flag" through the exploit of vulnerability on a
   designated website.
@@ -99,11 +99,11 @@ Introduces the remedy to the cognitive biases brought known by Think fast, think
     - https://ctf.hacker101.com/
     - https://ctfchallenge.com/
 
-# Connascence
+## Connascence
 
 Didn't make it to the end, the value of the talk wasn't clear to me.
 
-# Autonomous devices by Lorenzo Paris and Fabrizio Cannizzo from IOTICS
+## Autonomous devices by Lorenzo Paris and Fabrizio Cannizzo from IOTICS
 
 Fun demo of autonomous IOT devices by a robot car and a traffic light.
 
@@ -115,7 +115,7 @@ Fun demo of autonomous IOT devices by a robot car and a traffic light.
 - There are a defined ontology for device types, actions, metrics etc. which supports the metadata
   of devices. SPARQL is a query language to search devices based on metadata.
 
-# Distributed teams by Bertrand Delacretaz from Adobe & Apache
+## Distributed teams by Bertrand Delacretaz from Adobe & Apache
 
 Though the advices are not systematic, the points were delivered clear and most of them were
 valuable. As a principle scientist and board member of Apache foundation, the speaker distilled his
@@ -134,13 +134,13 @@ experiences into these.
 - All technical discussions should be open because it's unpredictable who could contribute to the
   discussion.
 
-# Build searching bar from MongoDB
+## Build searching bar from MongoDB
 
 It's more like a well-prepared demo of the full text searching engine built on MongoDB Atlas with
 similar syntax to Lucene. No critical questions are answered like distributed information, multiple
 index building etc.
 
-# From OOP to Go by Yarden from Rookout
+## From OOP to Go by Yarden from Rookout
 
 A junior engineer's pieces of observation after shifting OOP language Java to Go. Not really
 insightful but encouraging to see juniors in a conference.
@@ -148,7 +148,7 @@ insightful but encouraging to see juniors in a conference.
 - Go is "duck typed". It doesn't have real inheritance. Composition is always used.
 - Actually, my take is that it's a comparison between OOP and procedural language.
 
-# Cracking the scalability of JVM from creators of Quarkus
+## Cracking the scalability of JVM from creators of Quarkus
 
 It's a controversy talk. Quarkus performed below expectation at the beginning on TechEmpower
 benchmarking. After assembly level analysis, it's due to the caching of last type checked/cast
@@ -169,7 +169,7 @@ affected open source projects.
 Nevertheless, it's an informative talk that shows how a simple type check optimization could result
 in three-fold performance degradation in extreme case.
 
-# Learn from Montessori Method by Simone Casciaroli from Onto
+## Learn from Montessori Method by Simone Casciaroli from Onto
 
 One of my favourite talk for its insight and wisdom.
 
@@ -183,12 +183,12 @@ on his [blog series](https://simonecasciaroli.com/tag/montessori-leadership/).
 4. Prepared environment
 5. Freedom within limit
 
-# Where does a Platform start and end by Paula Kennedy from Syntasso
+## Where does a Platform start and end by Paula Kennedy from Syntasso
 
 Though the talk is mostly a rearrangement of content from Team Topology, the product seems worth a
 look: [Kratix](https://kratix.io/).
 
-# Quick & Dirty (& Right)
+## Quick & Dirty (& Right)
 
 Though the speaker scoffed Software Craftsmanship as always writing clean code dogmatically, he's
 for sure a software craftsman because he cares about how to do things sensibly depending on the
