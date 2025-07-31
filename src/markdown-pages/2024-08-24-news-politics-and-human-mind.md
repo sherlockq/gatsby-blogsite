@@ -1,11 +1,11 @@
 ---
 path: "/blog/news-politics-human-mind"
 date: "2024-11-10"
-title: "News, Politics and Popularisum => Oppsite ideologies lead to similar result"
+title: "News, Politics and Popularisum => Opposite ideologies lead to similar result"
 tags: ["Book review", "News"]
 ---
 
-It has been revised for 9 times, which is self explanatory of its value: NEWS
+This book had been revised for 9 times, which is self explanatory of its value: NEWS
 The Politics of Illusion (10th Edition). Before summarize the highlights of the
 book, I have to mention that throughout the time of reading I feel the content
 could be several fold compressed. The limited historic evidence is repeated in
