@@ -6,7 +6,7 @@ exports[`NavBar renders correctly 1`] = `
     className="bm-overlay"
     onClick={[Function]}
     style={
-      Object {
+      {
         "MozTransform": "translate3d(100%, 0, 0)",
         "MsTransform": "translate3d(100%, 0, 0)",
         "OTransform": "translate3d(100%, 0, 0)",
@@ -23,12 +23,12 @@ exports[`NavBar renders correctly 1`] = `
     }
   />
   <div
-    style={Object {}}
+    style={{}}
   >
     <div
       className="bm-burger-button"
       style={
-        Object {
+        {
           "zIndex": 1000,
         }
       }
@@ -39,7 +39,7 @@ exports[`NavBar renders correctly 1`] = `
         onMouseOut={[Function]}
         onMouseOver={[Function]}
         style={
-          Object {
+          {
             "background": "transparent",
             "border": "none",
             "cursor": "pointer",
@@ -54,6 +54,7 @@ exports[`NavBar renders correctly 1`] = `
             "zIndex": 1,
           }
         }
+        type="button"
       >
         Open Menu
       </button>
@@ -61,7 +62,7 @@ exports[`NavBar renders correctly 1`] = `
         <span
           className="bm-burger-bars"
           style={
-            Object {
+            {
               "height": "20%",
               "left": 0,
               "opacity": 1,
@@ -74,7 +75,7 @@ exports[`NavBar renders correctly 1`] = `
         <span
           className="bm-burger-bars"
           style={
-            Object {
+            {
               "height": "20%",
               "left": 0,
               "opacity": 1,
@@ -87,7 +88,7 @@ exports[`NavBar renders correctly 1`] = `
         <span
           className="bm-burger-bars"
           style={
-            Object {
+            {
               "height": "20%",
               "left": 0,
               "opacity": 1,
@@ -105,7 +106,7 @@ exports[`NavBar renders correctly 1`] = `
     className="bm-menu-wrap"
     id=""
     style={
-      Object {
+      {
         "MozTransform": "translate3d(100%, 0, 0)",
         "MsTransform": "translate3d(100%, 0, 0)",
         "OTransform": "translate3d(100%, 0, 0)",
@@ -123,7 +124,7 @@ exports[`NavBar renders correctly 1`] = `
     <div
       className="bm-menu"
       style={
-        Object {
+        {
           "boxSizing": "border-box",
           "height": "100%",
           "overflow": "auto",
@@ -133,7 +134,7 @@ exports[`NavBar renders correctly 1`] = `
       <nav
         className="bm-item-list"
         style={
-          Object {
+          {
             "height": "100%",
           }
         }
@@ -143,7 +144,7 @@ exports[`NavBar renders correctly 1`] = `
           href="/"
           id="home"
           style={
-            Object {
+            {
               "display": "block",
             }
           }
@@ -156,7 +157,7 @@ exports[`NavBar renders correctly 1`] = `
           href="/about"
           id="about"
           style={
-            Object {
+            {
               "display": "block",
             }
           }
@@ -169,7 +170,7 @@ exports[`NavBar renders correctly 1`] = `
           href="/resources"
           id="resources"
           style={
-            Object {
+            {
               "display": "block",
             }
           }
@@ -182,7 +183,7 @@ exports[`NavBar renders correctly 1`] = `
           href="/tags"
           id="tags"
           style={
-            Object {
+            {
               "display": "block",
             }
           }
@@ -193,12 +194,12 @@ exports[`NavBar renders correctly 1`] = `
       </nav>
     </div>
     <div
-      style={Object {}}
+      style={{}}
     >
       <div
         className="bm-cross-button"
         style={
-          Object {
+          {
             "height": 24,
             "position": "absolute",
             "right": 8,
@@ -211,7 +212,7 @@ exports[`NavBar renders correctly 1`] = `
           id="react-burger-cross-btn"
           onClick={[Function]}
           style={
-            Object {
+            {
               "background": "transparent",
               "border": "none",
               "cursor": "pointer",
@@ -227,12 +228,13 @@ exports[`NavBar renders correctly 1`] = `
             }
           }
           tabIndex={-1}
+          type="button"
         >
           Close Menu
         </button>
         <span
           style={
-            Object {
+            {
               "position": "absolute",
               "right": "14px",
               "top": "6px",
@@ -242,7 +244,7 @@ exports[`NavBar renders correctly 1`] = `
           <span
             className="bm-cross"
             style={
-              Object {
+              {
                 "height": 14,
                 "position": "absolute",
                 "transform": "rotate(45deg)",
@@ -253,7 +255,7 @@ exports[`NavBar renders correctly 1`] = `
           <span
             className="bm-cross"
             style={
-              Object {
+              {
                 "height": 14,
                 "position": "absolute",
                 "transform": "rotate(-45deg)",

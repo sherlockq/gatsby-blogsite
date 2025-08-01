@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
-export default function Header({ siteTitle }) {
+export default function Header({ siteTitle = `` }) {
   return (
     <header
       style={{
@@ -39,8 +39,4 @@ export default function Header({ siteTitle }) {
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
 }

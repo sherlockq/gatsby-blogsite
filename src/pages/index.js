@@ -15,19 +15,17 @@ export default function IndexPage({ data }) {
       <SEO title="Home" />
       <div className="blog-posts">
         {posts
-          .filter(post => post.node.frontmatter.title.length > 0)
-          .filter(post => post.node.frontmatter.wip !== true)
-          .map(({ node: post }) =>
-              <div className="blog-post-listing" key={post.id}>
-                <h1>
-                  <Link to={post.frontmatter.path}>
-                    {post.frontmatter.title}
-                  </Link>
-                </h1>
-                <h2>{post.frontmatter.date}</h2>
-                <p>{post.excerpt}</p>
-              </div>
-          )}
+          .filter((post) => post.node.frontmatter.title.length > 0)
+          .filter((post) => post.node.frontmatter.wip !== true)
+          .map(({ node: post }) => (
+            <div className="blog-post-listing" key={post.id}>
+              <h1>
+                <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
+              </h1>
+              <h2>{post.frontmatter.date}</h2>
+              <p>{post.excerpt}</p>
+            </div>
+          ))}
       </div>
     </Layout>
   )
@@ -35,7 +33,7 @@ export default function IndexPage({ data }) {
 
 export const pageQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
       edges {
         node {
           excerpt(pruneLength: 250)

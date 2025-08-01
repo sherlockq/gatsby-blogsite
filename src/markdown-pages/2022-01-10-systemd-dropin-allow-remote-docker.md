@@ -16,7 +16,7 @@ without toggling between machines.
 
 ## Final solution
 
-```shell
+```bash
 > sudo mkdir -p /etc/systemd/system/docker.service.d
 > sudo vi /etc/systemd/system/docker.service.d/host.conf
 
@@ -60,7 +60,7 @@ After two occurrences of this, I decided to move on.
 
 ## Extra gift for test container users
 
-```shell
+```bash
 ➜ cat ~/.testcontainers.properties
 # not sure the first line is necessary, it was there before
 docker.client.strategy=org.testcontainers.dockerclient.UnixSocketClientProviderStrategy

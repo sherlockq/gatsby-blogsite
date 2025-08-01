@@ -33,7 +33,7 @@ As a static presentation, codebase might not provide the runtime flow which matt
 scenarios. A debuggable deployment is a blessing. Just for the record, here are the arguments to 
 enable debugging for Tomcat and feature to monitor that in IntelliJ. 
 
-```shell
+```bash
 JPDA_OPTS="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5006" $TOMCAT_HOME/bin/catalina.sh jpda start
 ```
 
