@@ -13,7 +13,7 @@ import {
 
 import "../styles/share.scss"
 
-export default function Share({ socialConfig, tags }) {
+export default function Share({ socialConfig, tags = [] }) {
   return (
     <>
       Share:
@@ -62,7 +62,4 @@ Share.propTypes = {
     }),
   }).isRequired,
   tags: PropTypes.arrayOf(PropTypes.string),
-}
-Share.defaultProps = {
-  tags: [],
 }

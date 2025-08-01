@@ -23,7 +23,7 @@ export const PureTags = ({
       <div>
         <h1>Tags</h1>
         <ul>
-          {group.map(tag => (
+          {group.map((tag) => (
             <li key={tag.fieldValue}>
               <Link
                 className="tag-listing"
@@ -39,7 +39,7 @@ export const PureTags = ({
   )
 }
 
-export const Tags = props => {
+export const Tags = (props) => {
   return (
     <Layout>
       <PureTags {...props} />
@@ -57,7 +57,7 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(limit: 2000) {
-      group(field: frontmatter___tags) {
+      group(field: { frontmatter: { tags: SELECT } }) {
         fieldValue
         totalCount
       }
