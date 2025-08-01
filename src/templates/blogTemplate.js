@@ -66,14 +66,14 @@ export default function BlogTemplate({ data }) {
 }
 
 export const pageQuery = graphql`
-  query BlogPostByPath($path: String!) {
+  query BlogPostByPath($pagePath: String!) {
     site {
       siteMetadata {
         url
         twitterHandle
       }
     }
-    post: markdownRemark(frontmatter: { path: { eq: $path } }) {
+    post: markdownRemark(frontmatter: { path: { eq: $pagePath } }) {
       html
       tableOfContents(
         pathToSlugField: "frontmatter.path"

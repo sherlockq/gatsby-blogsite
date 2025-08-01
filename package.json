@@ -34,7 +34,8 @@
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-share": "^5.2.2",
-    "sass": "^1.89.2"
+    "sass": "^1.89.2",
+    "sass-loader": "^16.0.5"
   },
   "devDependencies": {
     "babel-jest": "^29.0.0",
