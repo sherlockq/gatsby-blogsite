@@ -1,0 +1,71 @@
+---
+path: "/blog/take-on-llm-dev-after-3-weeks"
+date: "2026-04-11"
+title: "Takes on LLM assisted development after 3 weeks of use"
+tags: [ "LLM", "Claude" ]
+---
+
+I've recently started a new role after the move to Hong Kong. The company has been pushing for AI use in all aspects of the business for more than a year, way ahead of the place I worked earlier in Uk, probably ahead of most places anyway. One approach of the push is unlimited token quota. Since my joining, I've started thinking and working AI first. Here is a summary of how it looks like.
+
+## Tooling
+
+We have access to all public commercial LLM. Claude is the main workforce. It'll be hard to tell the difference of models individually before the establishment of a repeatable benchmark method. So I stay with what most peers have been polishing.
+
+## Works out of box
+
+1. Investigation of code repo
+
+As a new joiner this is supposed to be a headache. There's a whole chapter in Martin Fowler's book Refactoring on how to efficiently grasp a new code base. I reckon with the help of LLM the chapter could use quite a rewrite.
+
+Claude doesn't consume the whole code base, which wouldn't be feasible for the current capacity of LLMs. It goes through a interactive process, starting with obvious entrypoint like README.md, CLAUDE.md to understand the framework being used. Then it'll navigate the package structure based on the common pattern of the framework which is likely to be part of the training data. Claude combines the knowledge within the modelwith the local tooling to gain more context, a design works really well. Who can't say the way it navigates the codebase didn't take inspiration from Martin's book?
+
+2. Troubleshooting
+
+Equiped with tooling to access production logs, data, code base and past knowledge in cooperate knowledgebase, LLM could pinpoint the issue with a high confidence. Troubleshooting is essentially a job fetching all the information and feed into a logic process. Even the latter goes wrong, the data fetching part could save tons of time with accumulating LLM skills.
+
+3. Document writing
+
+Hands down a life saver. The summarisation of work into tickets, commits and PRs following policies are both accurate and readable. Especially it's becoming a habbit to ask for update to tickets to record thinkgs to do without leaving the work in progress.
+
+4. Context switching and parallisation
+
+You can't beat a machine on this. With proper ochestration of sessions/conversations and subtasking, I start questioning the principle of focusing on one work and get it done in the AI era. I've even built a small gadget, of course totally by AI, to remind me when one session requires input. So far I'm still at early stage of one handful of sessions, who knows where is the limit.
+
+5. Building small gadget
+
+When complexity is not an issue, and there is likely known example somewhere in the code world which is inevitably absorbed by the model, it's no brainer to leave to model. Like a pomodoro, as I'm too lasy to ask for app installation permission in this highly security aware company. Or the session tracking app, albeit it's still buggy after numerous rounds of attempts. Which we'll cover later. 
+
+5. Implementation with clear test case and instruction
+
+For a complex existing code base, the challenge is not to deliver a standalone feature, but to keep the codebase in a maintainable state that future features or changes come fit it with a steady speed and quality. Clean code, TDD, or other modern principles are all about it. With all those thingking process built into each test case or instructions, LLM usually could carry out the implementation part with ease. The code quality is mostly acceptable, sometimes a matter of perference. 
+
+## Not that well
+
+1. Priorisation of instructions
+
+With build-up knowledge/context from hundreds of billions of parameters, prompts, user configuration, project configuration, skills etc, I would wonder how model sort out the overcrowded sometimes conflicting messages. Indeed it's struggling.
+
+I've pushed for a strict TDD style for a while, yet occationally model will skip it. There's also known examples that models ignore the security instructions and find a way to circumvent. Funnily that's exactly how a human being would do. One colleague mentioned checklist could help. I've yet implemented it.
+
+The other example is that if the code base is low in quality, you need to consistently ask LLM to question the current style and follow a better way. 
+
+
+2. Refactoring
+
+The frustration of LLM carrying out refactoring comes from two factors: the tendency to mimic existing bad behaviour, and the low effectiveness.
+
+The first bit echoes earlier mentioning of prefer consistency to best practice, which could be corrected with strong instructions.
+
+The seoncd bit is inheritently due to how LLM works. It takes in context as tokens and spit out tokens as output in a probablitic way. Refactoring requires more input tokens due to the fact that remembering existing code base cost more than a new feature request. You could see the LLM repeatably back and forth working on fixing imports, which most won't even think of with the help of IDE. 
+
+I'm planning to rely on tooling like OpenRewrite or IntelliJ interface see if the result would be different.
+
+3. Full agentic work
+
+This is the latest trend, but it didn't work out well for me so far. Even with a prescribed working plan, the end result drifted significantly from the expectation. To have the control we might need to fix all the way to low level design, like the traditional outsourcing model. That's against the modern engineering approach due to the lost of fast feedback from the process of developing. New questions and information pop up through the process when human being does the work. I've instructed several check gates for LLM to interview me and ask for review. It's still under tweaking but I start wondering where's the balance of decision making.
+
+## Final words
+
+So far, I treat LLM as a developer with the ultimate knowledges but questionable taste. It could retry things faster than most developers and reach similar result under similar time. Still, it's no substitution of real software craftsman.
+
+However, all the modern software engineering methodologies stem from understanding of human's flaw: limited mind space. Do they still apply to LLM? If not, how much of the methodologies should be rewritten? In my next blog I'd like to have a quick check on them.
